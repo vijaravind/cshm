@@ -1,0 +1,18 @@
+% Sophie SAKKA 
+
+set(URightHandm,'XData',timeAxis(1:i-4),'YData',URightHand(1:i-4))
+set(ULeftHandm,'XData',timeAxis(1:i-4),'YData',ULeftHand(1:i-4))
+set(ULowerArmRm,'XData',timeAxis(1:i-4),'YData',ULowerArmR(1:i-4))
+set(ULowerArmLm,'XData',timeAxis(1:i-4),'YData',ULowerArmL(1:i-4))
+set(UUpperArmRm,'XData',timeAxis(1:i-4),'YData',UUpperArmR(1:i-4))
+set(UUpperArmLm,'XData',timeAxis(1:i-4),'YData',UUpperArmL(1:i-4))
+set(UFootRm,'XData',timeAxis(1:i-4),'YData',UFootR(1:i-4))
+set(UFootLm,'XData',timeAxis(1:i-4),'YData',UFootL(1:i-4))
+set(ULowerLegRm,'XData',timeAxis(1:i-4),'YData',ULowerLegR(1:i-4))
+set(ULowerLegLm,'XData',timeAxis(1:i-4),'YData',ULowerLegL(1:i-4))
+set(UUpperLegRm,'XData',timeAxis(1:i-4),'YData',UUpperLegR(1:i-4))
+set(UUpperLegLm,'XData',timeAxis(1:i-4),'YData',UUpperLegL(1:i-4))
+set(UHeadm,'XData',timeAxis(1:i-4),'YData',UHead(1:i-4))
+set(UUpperTrunkm,'XData',timeAxis(1:i-4),'YData',UUpperTrunk(1:i-4))
+set(UMiddleTrunkm,'XData',timeAxis(1:i-4),'YData',UMiddleTrunk(1:i-4))
+set(ULowerTrunkm,'XData',timeAxis(1:i-4),'YData',ULowerTrunk(1:i-4))

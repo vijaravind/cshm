@@ -1,0 +1,9 @@
+% Sophie SAKKA 
+
+
+for k = 1:lines
+    eval(['set(' vars{linesIndex(k,1)} '_' vars{linesIndex(k,2)} ...
+        ',''XData'',[T_' vars{linesIndex(k,1)} '(1,4,i) T_' vars{linesIndex(k,2)} ...
+        '(1,4,i)],''YData'',[T_' vars{linesIndex(k,1)} '(2,4,i) T_' vars{linesIndex(k,2)} ...
+        '(2,4,i)],''ZData'',[T_' vars{linesIndex(k,1)} '(3,4,i) T_' vars{linesIndex(k,2)} '(3,4,i)])']);
+end

@@ -1,0 +1,18 @@
+% Sophie SAKKA 
+
+set(KRightHandm,'XData',timeAxis(1:i-2),'YData',KRightHand(1:i-2))
+set(KLeftHandm,'XData',timeAxis(1:i-2),'YData',KLeftHand(1:i-2))
+set(KLowerArmRm,'XData',timeAxis(1:i-2),'YData',KLowerArmR(1:i-2))
+set(KLowerArmLm,'XData',timeAxis(1:i-2),'YData',KLowerArmL(1:i-2))
+set(KUpperArmRm,'XData',timeAxis(1:i-2),'YData',KUpperArmR(1:i-2))
+set(KUpperArmLm,'XData',timeAxis(1:i-2),'YData',KUpperArmL(1:i-2))
+set(KFootRm,'XData',timeAxis(1:i-2),'YData',KFootR(1:i-2))
+set(KFootLm,'XData',timeAxis(1:i-2),'YData',KFootL(1:i-2))
+set(KLowerLegRm,'XData',timeAxis(1:i-2),'YData',KLowerLegR(1:i-2))
+set(KLowerLegLm,'XData',timeAxis(1:i-2),'YData',KLowerLegL(1:i-2))
+set(KUpperLegRm,'XData',timeAxis(1:i-2),'YData',KUpperLegR(1:i-2))
+set(KUpperLegLm,'XData',timeAxis(1:i-2),'YData',KUpperLegL(1:i-2))
+set(KHeadm,'XData',timeAxis(1:i-2),'YData',KHead(1:i-2))
+set(KUpperTrunkm,'XData',timeAxis(1:i-2),'YData',KUpperTrunk(1:i-2))
+set(KMiddleTrunkm,'XData',timeAxis(1:i-2),'YData',KMiddleTrunk(1:i-2))
+set(KLowerTrunkm,'XData',timeAxis(1:i-2),'YData',KLowerTrunk(1:i-2))
