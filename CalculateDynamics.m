@@ -15,64 +15,64 @@ m       = [  0.5053    5.1147333333              2.092                   1.22185
 
 
 
-JHand           = getJ(Ixx(1),  Iyy(1),  Izz(1),  CoM_pos(1),  m(1));
-JLowerArm       = getJ(Ixx(2),  Iyy(2),  Izz(2),  CoM_pos(2),  m(2));
-JUpperArm       = getJ(Ixx(3),  Iyy(3),  Izz(3),  CoM_pos(3),  m(3));
-JFoot           = getJ(Ixx(4),  Iyy(4),  Izz(4),  CoM_pos(4),  m(4));
-JLowerLeg       = getJ(Ixx(5),  Iyy(5),  Izz(5),  CoM_pos(5),  m(5));
-JUpperLeg       = getJ(Ixx(6),  Iyy(6),  Izz(6),  CoM_pos(6),  m(6));
-JHead           = getJ(Ixx(7),  Iyy(7),  Izz(7),  CoM_pos(7),  m(7));
-JUpperTrunk     = getJ(Ixx(8),  Iyy(8),  Izz(8),  CoM_pos(8),  m(8));
-JMiddleTrunk    = getJ(Ixx(9),  Iyy(9),  Izz(9),  CoM_pos(9),  m(9));
-JLowerTrunk     = getJ(Ixx(10), Iyy(10), Izz(10), CoM_pos(10),  m(10));
+JHand           = GetJ(Ixx(1),  Iyy(1),  Izz(1),  CoM_pos(1),  m(1));
+JLowerArm       = GetJ(Ixx(2),  Iyy(2),  Izz(2),  CoM_pos(2),  m(2));
+JUpperArm       = GetJ(Ixx(3),  Iyy(3),  Izz(3),  CoM_pos(3),  m(3));
+JFoot           = GetJ(Ixx(4),  Iyy(4),  Izz(4),  CoM_pos(4),  m(4));
+JLowerLeg       = GetJ(Ixx(5),  Iyy(5),  Izz(5),  CoM_pos(5),  m(5));
+JUpperLeg       = GetJ(Ixx(6),  Iyy(6),  Izz(6),  CoM_pos(6),  m(6));
+JHead           = GetJ(Ixx(7),  Iyy(7),  Izz(7),  CoM_pos(7),  m(7));
+JUpperTrunk     = GetJ(Ixx(8),  Iyy(8),  Izz(8),  CoM_pos(8),  m(8));
+JMiddleTrunk    = GetJ(Ixx(9),  Iyy(9),  Izz(9),  CoM_pos(9),  m(9));
+JLowerTrunk     = GetJ(Ixx(10), Iyy(10), Izz(10), CoM_pos(10),  m(10));
 
 dt = 1/60;
 
 [OmegaRightHand, HRightHand, FRightHand, KRightHand, URightHand] = ...
-    newton_euler(TRightHand, JHand, dt);
+    NewtonEuler(TRightHand, JHand, dt);
 
 [OmegaLeftHand, HLeftHand, FLeftHand, KLeftHand, ULeftHand] = ... 
-    newton_euler(TLeftHand, JHand, dt);
+    NewtonEuler(TLeftHand, JHand, dt);
 
 [OmegaLowerArmR, HLowerArmR, FLowerArmR, KLowerArmR, ULowerArmR] = ... 
-    newton_euler(TLowerArmR, JLowerArm, dt);
+    NewtonEuler(TLowerArmR, JLowerArm, dt);
 
 [OmegaLowerArmL, HLowerArmL, FLowerArmL, KLowerArmL, ULowerArmL] = ... 
-    newton_euler(TLowerArmL, JLowerArm, dt);
+    NewtonEuler(TLowerArmL, JLowerArm, dt);
 
 [OmegaUpperArmR, HUpperArmR, FUpperArmR, KUpperArmR, UUpperArmR] = ...
-    newton_euler(TUpperArmR, JUpperArm, dt);
+    NewtonEuler(TUpperArmR, JUpperArm, dt);
 
 [OmegaUpperArmL, HUpperArmL, FUpperArmL, KUpperArmL, UUpperArmL] = ...
-    newton_euler(TUpperArmL, JUpperArm, dt);
+    NewtonEuler(TUpperArmL, JUpperArm, dt);
 
 [OmegaFootR, HFootR, FFootR, KFootR, UFootR] = ... 
-    newton_euler(TFootR, JFoot, dt);
+    NewtonEuler(TFootR, JFoot, dt);
 
 [OmegaFootL, HFootL,FFootL, KFootL,UFootL] = ... 
-    newton_euler(TFootL, JFoot, dt);
+    NewtonEuler(TFootL, JFoot, dt);
 
 [OmegaLowerLegR, HLowerLegR, FLowerLegR, KLowerLegR, ULowerLegR] = ...
-    newton_euler(TLowerLegR, JLowerLeg, dt);
+    NewtonEuler(TLowerLegR, JLowerLeg, dt);
 
 [OmegaLowerLegL, HLowerLegL, FLowerLegL, KLowerLegL, ULowerLegL] = ... 
-    newton_euler(TLowerLegL, JLowerLeg, dt);
+    NewtonEuler(TLowerLegL, JLowerLeg, dt);
 
 [OmegaUpperLegR, HUpperLegR, FUpperLegR, KUpperLegR, UUpperLegR] = ... 
-    newton_euler(TUpperLegR, JUpperLeg, dt);
+    NewtonEuler(TUpperLegR, JUpperLeg, dt);
 
 [OmegaUpperLegL, HUpperLegL, FUpperLegL, KUpperLegL, UUpperLegL] = ... 
-    newton_euler(TUpperLegL, JUpperLeg, dt);
+    NewtonEuler(TUpperLegL, JUpperLeg, dt);
 
-[OmegaHead, HHead,FHead, KHead,UHead] = newton_euler(THead, JHead, dt);
+[OmegaHead, HHead,FHead, KHead,UHead] = NewtonEuler(THead, JHead, dt);
 
 [OmegaUpperTrunk, HUpperTrunk, FUpperTrunk, KUpperTrunk, UUpperTrunk] = ...
-    newton_euler(TUpperTrunk, JUpperTrunk, dt);
+    NewtonEuler(TUpperTrunk, JUpperTrunk, dt);
 
 [OmegaMiddleTrunk, HMiddleTrunk, FMiddleTrunk, KMiddleTrunk, UMiddleTrunk] = ... 
-    newton_euler(TMiddleTrunk, JMiddleTrunk, dt);
+    NewtonEuler(TMiddleTrunk, JMiddleTrunk, dt);
 
 [OmegaLowerTrunk, HLowerTrunk, FLowerTrunk, KLowerTrunk, ULowerTrunk] = ...
-    newton_euler(TLowerTrunk, JLowerTrunk, dt);
+    NewtonEuler(TLowerTrunk, JLowerTrunk, dt);
 
 timeAxis = [0:dt:(samples-1)/60];

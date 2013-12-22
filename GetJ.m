@@ -1,5 +1,5 @@
 % Sophie SAKKA 
-function [J] = getJ(Ixx, Iyy, Izz, COM_pos, m)
+function [J] = GetJ(Ixx, Iyy, Izz, COM_pos, m)
     % [J] = getJ(Ixx, Iyy, Izz, COM_pos, m)
     %
     % Function to form the J matrix.
