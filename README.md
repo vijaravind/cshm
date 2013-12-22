@@ -5,6 +5,6 @@
 2. See/register animation in .avi format with `Animate.m`.
 
 ### Notes
-+ The `*.drf` files are read from the `data/` folder in `openfile.m`.
++ The `*.drf` files are read from the `data/` folder in `OpenFile.m`.
 + Any animation video created will be saved in `animations/` folder.
 
