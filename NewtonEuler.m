@@ -1,5 +1,5 @@
 % Sophie SAKKA 
-function [Omega, H, F, K, U] = newton_euler(T, Jk, dt)
+function [Omega, H, F, K, U] = NewtonEuler(T, Jk, dt)
     % [Omega, H, F, K, U] = newton_euler(T, Jk, dt)
     %
     % Function to compute velocity, torque, kinetic and potential energies

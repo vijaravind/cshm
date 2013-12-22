@@ -1,11 +1,11 @@
-function [F, M] = newtontimeloop(mass, Ij, Xdot, Xddot, Fn, Mn, Ln)
-    % [F, M] = newton(mass, Ij, Xdot, Xddot, Fn, Mn, Ln)
+function [F, M] = newtontimeloop(mass, Ig, Xdot, Xddot, Fn, Mn, Ln)
+    % [F, M] = newton(mass, Ig, Xdot, Xddot, Fn, Mn, Ln)
     %
     % Function to compute the total force and total moment acting on the
     % link at ALL the time steps.
     % @input :
     % mass - Mass of the segment (scalar value in kg)
-    % Ij - Inertia matrix of the segment (3 x 3 matrix)
+    % Ig - Inertia matrix of the segment (3 x 3 matrix)
     % Xdot - Velocity of the link wrt center of gravity (6 x 1 screw)
     % Xddot - Acceleration of the link wrt center of gravity (6 x 1 screw)
     % Fn - Force of the next link. This is a (3 x n) matrix where 'n'
@@ -40,7 +40,7 @@ function [F, M] = newtontimeloop(mass, Ij, Xdot, Xddot, Fn, Mn, Ln)
         kp = k + 2; % position index
         kv = k + 1; % veocity index
         ka = k;     % acceleration index
-        [Fk, Mk] = newton(mass, Ij, Xdot(:, kv), Xddot(:, ka), ...
+        [Fk, Mk] = newton(mass, Ig, Xdot(:, kv), Xddot(:, ka), ...
                           Fn(:, :, k), Mn(:, :, k), Ln(:, :, kp));
         F = [F, Fk];
         M = [M, Mk];

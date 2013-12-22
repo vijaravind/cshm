@@ -31,6 +31,8 @@ function [arg] = bsp_arg(P, M)
 
 addpath('./geometry/');
 
+P = P(:);   % make sure P is a column vector
+
 % %%%%%%%%% SHAPES (arg.x.shape) %%%%%%%%%
 
 shape = {'ER';'TTC';'TTC';'ESBase';'TTC';'ESTop';'ER';'EC';'ES';'EC'};
@@ -194,5 +196,7 @@ arg     = struct('hand',     hand,      ...
                  'mtrunk',   mtrunk,    ...
                  'ltrunk',   ltrunk);
 
+rmpath('./geometry/');             
+             
 end
 
