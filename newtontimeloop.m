@@ -35,7 +35,7 @@ function [F, M] = newtontimeloop(mass, Ig, Xdot, Xddot, Fn, Mn, Ln)
            'newtontimeloop() : size(Fn, 3) == size(Mn, 3)');
     assert(size(Ln, 3) == size(Mn, 3), ... 
            'newtontimeloop() : size(Ln, 3) == size(Mn, 3)');       
-    assert(size(Ln, 3) >= size(Xddot, 2), ...
+    assert(size(Ln, 2) >= size(Xddot, 2), ...
            'newtontimeloop() : size(Ln, 2) >= size(Xddot, 2)'); 
     nsteps = size(Xddot, 2);
     nnextl = size(Fn, 3);
@@ -48,7 +48,7 @@ function [F, M] = newtontimeloop(mass, Ig, Xdot, Xddot, Fn, Mn, Ln)
         % convert to 2D matrix
         Fn_k = reshape(Fn(:, k, :), 3, nnextl);
         Mn_k = reshape(Mn(:, k, :), 3, nnextl);
-        Ln_k = reshape(Ln(:, :, kp), 3, nnextl);
+        Ln_k = reshape(Ln(:, kp, :), 3, nnextl);
         % call newton-euler method
         [Fk, Mk] = newton(mass, Ig, Xdot(:, kv), Xddot(:, ka), ...
                           Fn_k, Mn_k, Ln_k);
