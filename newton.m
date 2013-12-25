@@ -48,10 +48,10 @@ function [F, M] = newton(mass, Ij, Xdot, Xddot, Fn, Mn, Ln)
     totalFn = zeros(3,1);
     totalMn = zeros(3,1);
     totalcross = zeros(3,1);
-    for k = 1:size(Ln, 2)
-        totalFn = totalFn + Fn(:, k);
-        totalMn = totalMn + Mn(:, k);
-        totalcross = totalcross + cross(Ln(:, k), Fn(:, k));
+    for i = 1:size(Ln, 2)
+        totalFn = totalFn + Fn(:, i);
+        totalMn = totalMn + Mn(:, i);
+        totalcross = totalcross + cross(Ln(:, i), Fn(:, i));
     end
     
     % compute the total force and moments of the current link
