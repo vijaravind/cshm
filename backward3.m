@@ -18,7 +18,7 @@ function [F1, M1, F2, M2, F3, M3] = backward3( ...
     % link3 = "end-effector", link2 = middle link, link1 = base link
     % For an Arm, 3 = Hand, 2 = Lower Arm, 1 = Upper Arm
     % For Torso, 3 = Upper Trunk, 2 = Middle Trunk, 1 = Lower Trunk
-    % For an Arm, 3 = Upper Leg, 2 = Lower Leg, 1 = Foot
+    % For a Leg, 3 = UpperLeg/Foot, 2 = Lower Leg, 1 = Foot/UpperLeg
     %
     % @input : 
     % mass1, mass2, mass3 - Mass of each segment
