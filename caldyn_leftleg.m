@@ -39,15 +39,13 @@ function [F, M] = caldyn_leftleg(mass, Ig, CoG)
         % compute the 6x1 screw representation of link positions from
         % transformation matrices
         % X_<seg16{j}> = pose(T<seg16{j}>)
-        eval(sprintf('X_%s = pose(T);', seg));
+        eval(sprintf('X_%s = pose(T, CoG{%d});', seg, j));
         
         % compute velocity and acceleration
         % [Xdot_<seg16{j}>, Xddot_<seg16{j}>] = vel_acc(X_<seg16{j}>, dt)
         eval(sprintf('[Xdot_%s, Xddot_%s] = vel_acc(X_%s, dt);', ...
                      seg, seg, seg));
     end
-    
-    % TESTED TILL HERE
     
     % zero vector across all the time steps
     zero_fm = zeros(3, size(Xddot_Head, 2), 1);
