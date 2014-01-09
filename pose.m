@@ -16,7 +16,7 @@ function [X] = pose(T, CoG_offset)
            'pose() : problem with sample size ie. less than 1');
     X = [];
     for k = 1:nsteps
-        Pk = T(1:3, 4, k) + CoG_offset;  % position vector
+        Pk = T(1:3, 4, k); % + CoG_offset;  % position vector
         % convert rotation matrix to vector
         uak = vrrotmat2vec(T(1:3, 1:3, k));
         Rk = uak(1, 1:3) * uak(1, 4);  % rotation vector

@@ -11,12 +11,38 @@ function [] = plot_forces_moments(F, M, filename)
     fpMz = force_plate(:, 8);
     
     % store left foot calculations
-    left_foot = -F{11};
+    foot_l_f = F{11};
+    foot_l_m = M{11};
+     
+    % plot x forces
+    figure(1); hold on;
+    subplot(2,1,1); plot(fpFx, 'b'); title('force plate Fx'); hold on;
+    subplot(2,1,2); plot(foot_l_f(1,:), 'g'); title('calculated');
+    
+    % plot y forces
+    figure(2); hold on;
+    subplot(2,1,1); plot(fpFy, 'b'); title('force plate Fy'); hold on;
+    subplot(2,1,2); plot(foot_l_f(2,:), 'g'); title('calculated');
     
     % plot z forces
-    figure(1); hold on;
-    plot(fpFz, 'b'); hold on;
-    plot(left_foot(3,:), 'g');
+    figure(3); hold on;
+    subplot(2,1,1); plot(fpFz, 'b'); title('force plate Fz'); hold on;
+    subplot(2,1,2); plot(-foot_l_f(3,:), 'g'); title('calculated');
+    
+    % plot x moments
+    figure(4); hold on;
+    subplot(2,1,1); plot(fpMx, 'b'); title('force plate Mx'); hold on;
+    subplot(2,1,2); plot(foot_l_m(1,:), 'g'); title('calculated');
+    
+    % plot y moments
+    figure(5); hold on;
+    subplot(2,1,1); plot(fpMy, 'b'); title('force plate My'); hold on;
+    subplot(2,1,2); plot(foot_l_m(2,:), 'g'); title('calculated');
+    
+    % plot z moments
+    figure(6); hold on;
+    subplot(2,1,1); plot(fpMz, 'b'); title('force plate Mz'); hold on;
+    subplot(2,1,2); plot(foot_l_m(3,:), 'g'); title('calculated');
     
 end
 
