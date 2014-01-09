@@ -24,61 +24,61 @@ function [mass, Ig, CoM] = bsp_interface(P, M)
         if size(strfind(seg, 'Hand'), 2) ~= 0
             mass{j} = bsp.hand.mass;
             Ig{j} = diag(bsp.hand.I);
-            CoM{j} = [0; 0; bsp.hand.CoM];
+            CoM{j} = [0; 0; bsp.hand.CoM] .* 0.01;
             continue;
         end
         if size(strfind(seg, 'LowerArm'), 2) ~= 0
             mass{j} = bsp.forearm.mass;
             Ig{j} = diag(bsp.forearm.I);
-            CoM{j} = [0; 0; bsp.forearm.CoM];
+            CoM{j} = [0; 0; bsp.forearm.CoM] .* 0.01;
             continue;
         end
         if size(strfind(seg, 'UpperArm'), 2) ~= 0
             mass{j} = bsp.upperarm.mass;
             Ig{j} = diag(bsp.upperarm.I);
-            CoM{j} = [0; 0; bsp.upperarm.CoM];
+            CoM{j} = [0; 0; bsp.upperarm.CoM] .* 0.01;
             continue;
         end
         if size(strfind(seg, 'Foot'), 2) ~= 0
             mass{j} = bsp.foot.mass;
             Ig{j} = diag(bsp.foot.I);
-            CoM{j} = [0; 0; bsp.foot.CoM];
+            CoM{j} = [0; 0; bsp.foot.CoM] .* 0.01;
             continue;
         end
         if size(strfind(seg, 'LowerLeg'), 2) ~= 0
             mass{j} = bsp.shank.mass;
             Ig{j} = diag(bsp.shank.I);
-            CoM{j} = [0; 0; bsp.shank.CoM];
+            CoM{j} = [0; 0; bsp.shank.CoM] .* 0.01;
             continue;
         end
         if size(strfind(seg, 'UpperLeg'), 2) ~= 0
             mass{j} = bsp.thigh.mass;
             Ig{j} = diag(bsp.thigh.I);
-            CoM{j} = [0; 0; bsp.thigh.CoM];
+            CoM{j} = [0; 0; bsp.thigh.CoM] .* 0.01;
             continue;
         end
         if size(strfind(seg, 'Head'), 2) ~= 0
             mass{j} = bsp.head.mass;
             Ig{j} = diag(bsp.head.I);
-            CoM{j} = [0; 0; bsp.head.CoM];
+            CoM{j} = [0; 0; bsp.head.CoM] .* 0.01;
             continue;
         end
         if size(strfind(seg, 'UpperTrunk'), 2) ~= 0
             mass{j} = bsp.utrunk.mass;
             Ig{j} = diag(bsp.utrunk.I);
-            CoM{j} = [0; 0; bsp.utrunk.CoM];
+            CoM{j} = [0; 0; bsp.utrunk.CoM] .* 0.01;
             continue;
         end
         if size(strfind(seg, 'MiddleTrunk'), 2) ~= 0
             mass{j} = bsp.mtrunk.mass;
             Ig{j} = diag(bsp.mtrunk.I);
-            CoM{j} = [0; 0; bsp.mtrunk.CoM];
+            CoM{j} = [0; 0; bsp.mtrunk.CoM] .* 0.01;
             continue;
         end
         if size(strfind(seg, 'LowerTrunk'), 2) ~= 0
             mass{j} = bsp.ltrunk.mass;
             Ig{j} = diag(bsp.ltrunk.I);
-            CoM{j} = [0; 0; bsp.ltrunk.CoM];
+            CoM{j} = [0; 0; bsp.ltrunk.CoM] .* 0.01;
             continue;
         end
     end
