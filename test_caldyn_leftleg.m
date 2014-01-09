@@ -15,3 +15,4 @@ BodyMass = 90.4;
 
 [mass, Ig, CoG] = bsp_interface(BSP, BodyMass);
 [F, M] = caldyn_leftleg(mass, Ig, CoG);
+plot_forces_moments(F, M, filename);
