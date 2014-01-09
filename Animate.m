@@ -8,10 +8,12 @@
 % Load .mat file saved with function openfile.
 % Save avi video by default, disable by commenting the last line.
 
-clear
+%clear
 %clc
 
-load MediumJump.mat
+%load MediumJump.mat
+matfile = strcat(filename, '.mat');
+load(matfile)
 pathname = 'animations/';
 
 figure(651)

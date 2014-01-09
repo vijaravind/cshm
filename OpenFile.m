@@ -9,11 +9,8 @@
 % -- LostSamples
 %
 
-clear
-clc
-
 % Name of .drf file to be opened
-filename = 'MediumJump';         
+%filename = 'MediumJump';         
 % Path to save generated files
 pathname = './';       
 
