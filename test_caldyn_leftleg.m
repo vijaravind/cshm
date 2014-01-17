@@ -6,6 +6,7 @@ filename = 'data/KickSlow';
 
 %OpenFile
 Animate
+pause;
 
 % Ahmed size measurements
 BSP = [19.2 10 29 37 37 27.5 38.9 45.5 22 18 26 12 14.5 26 17 27 27.5 34 ... 
@@ -15,4 +16,4 @@ BodyMass = 90.4;
 
 [mass, Ig, CoG] = bsp_interface(BSP, BodyMass);
 [F, M] = caldyn_leftleg(mass, Ig, CoG);
-plot_forces_moments(F, M, filename);
+plot_forces_moments(F, M, filename, false);

@@ -97,9 +97,9 @@ function [F, M] = caldyn_leftleg(mass, Ig, CoG)
     Le(:, :, 1) = L_Head; 
     Le(:, :, 2) = L_UpperArmR; 
     Le(:, :, 3) = L_UpperArmL;
-    Fe(:, :, 1) = F_Head; Me(:, :, 1) = M_Head; 
-    Fe(:, :, 2) = F_UpperArmR; Me(:, :, 2) = M_UpperArmR; 
-    Fe(:, :, 3) = F_UpperArmL; Me(:, :, 3) = M_UpperArmL;
+    Fe(:, :, 1) = F_Head;       Me(:, :, 1) = M_Head; 
+    Fe(:, :, 2) = F_UpperArmR;  Me(:, :, 2) = M_UpperArmR; 
+    Fe(:, :, 3) = F_UpperArmL;  Me(:, :, 3) = M_UpperArmL;
     [F_UpperTrunk, M_UpperTrunk] = newtontimeloop(mass{14}, Ig{14}, ...
         Xdot_UpperTrunk, Xddot_UpperTrunk, Fe, Me, Le);
     % middle trunk
