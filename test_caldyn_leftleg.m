@@ -6,7 +6,7 @@ filename = 'data/KickSlow';
 
 %OpenFile
 Animate
-pause;
+pause(2);
 
 % Ahmed size measurements
 BSP = [19.2 10 29 37 37 27.5 38.9 45.5 22 18 26 12 14.5 26 17 27 27.5 34 ... 
